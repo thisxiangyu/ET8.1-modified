@@ -12,6 +12,8 @@ namespace ET
             self.Unit = GameObject.Find("/Global/Unit").transform;
             self.UI = GameObject.Find("/Global/UI").transform;
             self.GlobalConfig = Resources.Load<GlobalConfig>("GlobalConfig");
+            self.Camera = self.Global.Find("MainCamera").GetComponent<Camera>();
+            self.UICamera = self.Global.Find("UICamera").GetComponent<Camera>();
         }
     }
     
@@ -21,6 +23,8 @@ namespace ET
         public Transform Global;
         public Transform Unit { get; set; }
         public Transform UI;
+        public Camera Camera { get; set; }
+        public Camera UICamera { get; set; }
 
         public GlobalConfig GlobalConfig { get; set; }
     }

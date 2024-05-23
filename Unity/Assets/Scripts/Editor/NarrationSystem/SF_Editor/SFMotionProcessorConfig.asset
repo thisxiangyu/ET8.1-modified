@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964fd5a5bac0f430f99b14ccf38c28e2, type: 3}
+  m_Name: SFMotionProcessorConfig
+  m_EditorClassIdentifier: 
+  SampleBody: {fileID: 11400000, guid: 66dc3edff07f34b0883d241f4fb87314, type: 2}
+  ToBeEdited:
+  - {fileID: 7400000, guid: c84c33ecc57fe4312a8ba7bae5cf497c, type: 2}
+  - {fileID: 7400000, guid: 7f756f3f545651e458a6c8d72b10aff1, type: 2}
+  MotionProcessorClipController: {fileID: 0}

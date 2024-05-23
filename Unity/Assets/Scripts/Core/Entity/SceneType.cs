@@ -5,6 +5,8 @@ namespace ET
 	[Flags]
 	public enum SceneType: long
 	{
+		/*<< n符号的意思是把一个整数以二进制的方式左移n位,比如1<<2就是100,而1<<5就是100000,以此类推*/
+
 		None = 0,
 		Main = 1, // 主纤程,一个进程一个, 初始化从这里开始
 		NetInner = 1 << 2, // 负责进程间消息通信
@@ -24,9 +26,11 @@ namespace ET
 		LockStepServer = 1 << 17,
 		RoomRoot = 1 << 18,
 		Watcher = 1 << 19,
+        Road = 1 << 20,
+        MusicGame = 1 << 21,
 
-		// 客户端
-		Demo = 1 << 30,
+        // 客户端
+        Demo = 1 << 30,
 		Current = 1L << 31,
 		LockStep = 1L << 32,
 		LockStepView = 1L << 33,

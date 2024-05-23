@@ -8,6 +8,7 @@ namespace ET
         Low = 10,
         Mid = 20,
         High = 30,
+        Overlay = int.MaxValue
     }
     
     public class UILayerScript: MonoBehaviour
