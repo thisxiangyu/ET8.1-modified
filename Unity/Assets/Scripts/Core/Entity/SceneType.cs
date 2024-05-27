@@ -26,8 +26,6 @@ namespace ET
 		LockStepServer = 1 << 17,
 		RoomRoot = 1 << 18,
 		Watcher = 1 << 19,
-        Road = 1 << 20,
-        MusicGame = 1 << 21,
 
         // 客户端
         Demo = 1 << 30,
@@ -37,7 +35,10 @@ namespace ET
 		DemoView = 1L << 34,
 		NetClient = 1L << 35,
 
-		All = long.MaxValue,
+        Road = 1L << 36,
+        MusicGame = 1L << 37,
+
+        All = long.MaxValue,
 	}
 
 	public static class SceneTypeHelper

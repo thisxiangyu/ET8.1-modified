@@ -1,6 +1,6 @@
 ﻿using ET.Client;
 using UnityEngine;
-//using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering.Universal;
 
 namespace ET.Client
 {
@@ -40,9 +40,9 @@ namespace ET.Client
         /// <param name="UICamera">UI相机</param>
         public static void SetUICameraForCamera(Camera MainCamera, Camera UICamera)
         {
-            //var data = MainCamera.GetUniversalAdditionalCameraData(); //URP可以通过这个方法来访问和修改相机的后处理效果、自定义渲染器特性、剪辑平面设置、屏幕空间反射等
-            //if (!data.cameraStack.Contains(UICamera))
-            //    data.cameraStack.Add(UICamera);
+            var data = MainCamera.GetUniversalAdditionalCameraData(); //URP可以通过这个方法来访问和修改相机的后处理效果、自定义渲染器特性、剪辑平面设置、屏幕空间反射等
+            if (!data.cameraStack.Contains(UICamera))
+                data.cameraStack.Add(UICamera);
         }
     }
 }
