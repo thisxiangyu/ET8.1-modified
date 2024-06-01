@@ -6,13 +6,13 @@ namespace ET.Client
     public class GoOnTheRoad : MonoBehaviour
     {
         public Init InitRef;
-        public bool skipRoadScene = false;
+        public bool avoidRoadScene = false;
 
         [Header("GlobalMainCamera will be deactivated, use RoadScene cameras")]
         public Camera GlobalMainCameraRef;
         public Camera GlobalUICameraRef;
 
-        public UnityEngine.SceneManagement.Scene RoadScene;
+        [HideInInspector]public UnityEngine.SceneManagement.Scene RoadScene;
 
         //单例
         private static GoOnTheRoad instance;
@@ -28,7 +28,7 @@ namespace ET.Client
         {
             instance = this;
 
-            if(!skipRoadScene)
+            if(!avoidRoadScene)
             {
                 InitRef.OnStartAsyncBegin += LoadRoadScene;
                 InitRef.OnStartAsyncFinish += SetRoadSceneAsActiveScene;

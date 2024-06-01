@@ -117,7 +117,7 @@ namespace ET
         }
 
         //加载LoadingPage到Overlay上
-        public bool displayLoadingPage;
+        [HideInInspector]public bool displayLoadingPage=true;
         private GameObject LoadLoadingPage()
         {
             if(PrefabOfInitializePage == null)
