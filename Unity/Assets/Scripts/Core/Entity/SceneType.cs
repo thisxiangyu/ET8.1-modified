@@ -27,6 +27,8 @@ namespace ET
 		RoomRoot = 1 << 18,
 		Watcher = 1 << 19,
 
+        AccountHub = 1 << 20,
+
         // 客户端
         Demo = 1 << 30,
 		Current = 1L << 31,

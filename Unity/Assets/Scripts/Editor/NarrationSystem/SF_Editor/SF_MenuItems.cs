@@ -422,7 +422,7 @@ public class SF_MenuItems : EditorWindow
 
 
     //在支流创建振动器
-    [MenuItem("GameObject/StringsFlow/(在 VibrationBasin创建) 振动器", false, 3)]
+    [MenuItem("GameObject/StringsFlow/新振动器", false, 3)]
     private static void CreateVibratorObjectOnSF_Editor(MenuCommand menuCommand)
     {
         // 创建一个空的Vibrator
