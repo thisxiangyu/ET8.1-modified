@@ -4,7 +4,7 @@ using MemoryPack;
 
 namespace ET
 {
-    public static class MemoryPackHelper
+    public static partial  class MemoryPackHelper
     {
         public static byte[] Serialize(object message)
         {

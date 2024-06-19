@@ -29,7 +29,7 @@ namespace ET
 
         AccountHub = 1 << 20,
 
-        // 客户端
+        // 客户端或Share(注意long类型最多左移64位)
         Demo = 1 << 30,
 		Current = 1L << 31,
 		LockStep = 1L << 32,
@@ -39,6 +39,7 @@ namespace ET
 
         Road = 1L << 36,
         MusicGame = 1L << 37,
+        IO = 1L << 38,
 
         All = long.MaxValue,
 	}
