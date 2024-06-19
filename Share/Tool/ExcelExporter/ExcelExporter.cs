@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -13,6 +12,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
 using OfficeOpenXml;
 using LicenseContext = OfficeOpenXml.LicenseContext;
+using MemoryPack;
 
 namespace ET
 {
@@ -43,7 +43,8 @@ namespace ET
     }
 
     // 这里加个标签是为了防止编译时裁剪掉protobuf，因为整个tool工程没有用到protobuf，编译会去掉引用，然后动态编译就会出错
-    class Table
+    [MemoryPackable]
+    partial class Table
     {
         public bool C;
         public bool S;
@@ -448,7 +449,6 @@ namespace ET
                 }
 
                 sb.Append($"\t\t/// <summary>{headInfo.FieldDesc}</summary>\n");
-                sb.Append($"\t[MemoryPackable]\n");
                 string fieldType = headInfo.FieldType;
                 sb.Append($"\t\tpublic {fieldType} {headInfo.FieldName} {{ get; set; }}\n");
             }
