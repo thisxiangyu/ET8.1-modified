@@ -448,6 +448,7 @@ namespace ET
                 }
 
                 sb.Append($"\t\t/// <summary>{headInfo.FieldDesc}</summary>\n");
+                sb.Append($"\t[MemoryPackable]\n");
                 string fieldType = headInfo.FieldType;
                 sb.Append($"\t\tpublic {fieldType} {headInfo.FieldName} {{ get; set; }}\n");
             }
