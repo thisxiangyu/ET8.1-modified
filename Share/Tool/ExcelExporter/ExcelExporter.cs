@@ -434,6 +434,7 @@ namespace ET
             using StreamWriter sw = new StreamWriter(txt);
 
             StringBuilder sb = new StringBuilder();
+
             foreach ((string _, HeadInfo headInfo) in classField)
             {
                 if (headInfo == null)
