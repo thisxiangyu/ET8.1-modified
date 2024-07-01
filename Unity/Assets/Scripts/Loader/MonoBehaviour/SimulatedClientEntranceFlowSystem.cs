@@ -47,6 +47,8 @@ public static class PathsDictRegistrationTool
     }
     public static void UnregisterLoginPage()
     {SimulatedClientEntranceFlowSystem.PathsDict.Remove(KeyUIPage.LoginPage);}
+    public static void UnregisterGameEntrancePage()
+    { SimulatedClientEntranceFlowSystem.PathsDict.Remove(KeyUIPage.GameEntrancePage); }
     public static void UnregisterHallPage()
     {SimulatedClientEntranceFlowSystem.PathsDict.Remove(KeyUIPage.HallPage);}
     public static void UnregisterChapterAndSectionPage()

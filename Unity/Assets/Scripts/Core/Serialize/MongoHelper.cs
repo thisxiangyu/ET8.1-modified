@@ -18,6 +18,7 @@ namespace ET
             {
                 supportInitialize.BeginInit();
             }
+
             return obj.ToJson(defaultSettings);
         }
 

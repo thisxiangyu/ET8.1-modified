@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.IO;
+using UnityEngine;
 
 namespace ET
 {
@@ -10,11 +12,11 @@ namespace ET
         {
             get
             {
-                string game = Application.productName;
+                string name = Application.productName;
                 string path = AppResPath;
                 if (Application.isMobilePlatform)
                 {
-                    path = $"{Application.persistentDataPath}/{game}/";
+                    path = $"{Application.persistentDataPath}/{name}/";
                 }
                 return path;
             }
@@ -44,6 +46,24 @@ namespace ET
                 return Application.streamingAssetsPath;
 #endif
 
+            }
+        }
+
+        /// <summary>
+        /// 存档路径
+        /// </summary>
+        public static string SavePath
+        {
+            get
+            {
+                string name = Application.productName;
+                string rootPath = AppDomain.CurrentDomain.BaseDirectory;
+                if (Application.isMobilePlatform)
+                {
+                    rootPath = $"{Application.persistentDataPath}/{name}/";
+                }
+                string savePath = Path.Combine(rootPath, "MySave");
+                return savePath;
             }
         }
     }
