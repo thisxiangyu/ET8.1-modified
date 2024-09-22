@@ -50,19 +50,37 @@ namespace ET
         }
 
         /// <summary>
-        /// 存档路径
+        /// 乐团项目的本地持久存档路径
         /// </summary>
-        public static string SavePath
+        public static string YueTuanLocalPersistentDataPath
         {
             get
             {
                 string name = Application.productName;
                 string rootPath = AppDomain.CurrentDomain.BaseDirectory;
-                if (Application.isMobilePlatform)
+                if (Application.isMobilePlatform)//移动端
                 {
                     rootPath = $"{Application.persistentDataPath}/{name}/";
                 }
-                string savePath = Path.Combine(rootPath, "MySave");
+                string savePath = Path.Combine(rootPath, "YueTuanLocalData");
+                return savePath;
+            }
+        }
+
+        /// <summary>
+        /// 乐团项目的本地缓存路径
+        /// </summary>
+        public static string YueTuanLocalCacheDataPath
+        {
+            get
+            {
+                string name = Application.productName;
+                string rootPath = AppDomain.CurrentDomain.BaseDirectory;
+                if (Application.isMobilePlatform)//移动端
+                {
+                    rootPath = $"{Application.temporaryCachePath}/{name}/";
+                }
+                string savePath = Path.Combine(rootPath, "YueTuanCache");
                 return savePath;
             }
         }

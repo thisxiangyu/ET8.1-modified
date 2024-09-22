@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using ET.Clent;
 using ET.Client;
 using UnityEditor;
 using UnityEngine;
